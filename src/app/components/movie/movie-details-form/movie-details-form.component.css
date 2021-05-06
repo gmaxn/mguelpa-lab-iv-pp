@@ -1,0 +1,91 @@
+:host {
+    /* border: 1px solid green;
+      border-style: dashed;
+      border-radius: 10px; */
+  }
+  
+  #margin {
+    background: whitesmoke;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 10px;
+    height: 100%;
+  }
+  
+  .form-intput-wrapper {
+    display: flex;
+    padding: 10px;
+    margin: 0 0 5px 0;
+  
+    flex-direction: column;
+  
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+  }
+  
+  form {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 10px 10px 10px;
+    height: 100%;
+    background-color: black;
+  }
+  
+  p {
+    border: 1px solid black;
+    font-family: consolas, "Courier New", Courier, monospace;
+    font-weight: bolder;
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
+  }
+  
+  #margin > form > div:last-child {
+    margin-bottom: 0;
+  }
+  
+  .btn-primary {
+    background-color: rgb(20, 108, 162);
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: consolas, "Courier New", Courier, monospace;
+    font-weight: bolder;
+    color: whitesmoke;
+    margin-right: 5px;
+    width: 75px;
+  }
+  
+  .btn-success {
+    background-color: rgb(37, 177, 15);
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: consolas, "Courier New", Courier, monospace;
+    font-weight: bolder;
+    color: whitesmoke;
+    margin-right: 5px;
+    width: 75px;
+  }
+  
+  .btn-danger {
+    background-color: rgb(215, 30, 30);
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: consolas, "Courier New", Courier, monospace;
+    font-weight: bolder;
+    color: whitesmoke;
+    width: 75px;
+  }
+  
+  div.invalid-input>small {
+    color: red;
+    opacity: 1;
+  }
+  
+  div.checked-input>small {
+    color: green;
+    opacity: 1;
+  }

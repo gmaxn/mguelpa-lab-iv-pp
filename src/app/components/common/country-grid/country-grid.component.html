@@ -1,0 +1,52 @@
+<style>
+    #wrapper {}
+
+    #country-list-container {
+        overflow-y: scroll;
+        height: 285px !important;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        padding: 2px;
+
+    }
+
+    #country-list-container::-webkit-scrollbar {
+        /* display: none; */
+    }
+
+
+    #country-list {}
+
+    #row:hover {
+        background-color: rgb(255, 240, 120);    
+    }
+</style>
+
+
+<div id="wrapper">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text">Select your coutry</span>
+    </h4>
+
+    <div id="country-list-container" class="list-group mb-3">
+        <ul id="conutry-list" class="list-group mb-3" *ngIf="countries && countries.length">
+            <li id="row" class="list-group-item d-flex justify-content-between" *ngFor="let country of countries" (click)="onSelectedCountry(country)">
+                <div>
+                    <h6 class="my-0">{{country.name}}</h6>
+                    <small class="text-muted">{{country.capital}}</small>
+                </div>
+                <span class="text-muted"><img style="height: 35px; width: 50px;" src="{{country.flag}}" alt=""></span>
+            </li>
+        </ul>
+    </div>
+
+
+    <form class="card p-2">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+        </div>
+    </form>
+</div>

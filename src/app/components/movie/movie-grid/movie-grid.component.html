@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Fecha de estreno</th>
+            <th>Cantidad de publico</th>
+            <th>Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies" (click)="onSelection(movie)">
+            <td>{{movie.nombre}}</td>
+            <td>{{movie.tipo}}</td>
+            <td>{{movie.estreno}}</td>
+            <td>{{movie.publico}}</td>
+            <td><img style="height: 100px;" src="{{movie.imageUrl}}" alt=""></td>
+        </tr>
+    </tbody>
+</table>

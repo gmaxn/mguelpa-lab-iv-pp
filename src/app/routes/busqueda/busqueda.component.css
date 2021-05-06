@@ -1,0 +1,23 @@
+  
+  :host {
+    display: grid;
+    grid-template-columns: auto 312.666px 5px 312.666px 5px 312.666px auto;
+    grid-template-rows: 5px 250px 5px auto 5px;
+  }
+  
+  app-country-grid {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  app-movie-grid {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  app-actor-grid {
+    grid-column: 6;
+    grid-row: 2;
+  }
+  app-actor-details-form {
+    grid-column: 2 / span 4;
+    grid-row: 4;
+  }
