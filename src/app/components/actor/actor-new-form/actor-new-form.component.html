@@ -1,0 +1,42 @@
+<div>
+    <h4 class="mb-3">Alta Actor</h4>
+    <form class="needs-validation" novalidate [formGroup]="form">
+        <div class="row g-3">
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre">
+            </div>
+
+            <div class="col-sm-12">
+                <label for="lastName" class="form-label">Apellido</label>
+                <input type="text" class="form-control" formControlName="apellido">
+            </div>
+
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">Nacionalidad</label>
+                <input type="text" class="form-control" formControlName="nacionalidad" readonly>
+            </div>
+
+            <div class="col-6">
+                <label for="country" class="form-label">Sexo</label>
+                <select class="form-select" id="country" formCotrolName="sexo" (change)="changeGender($event)">
+                    <option selected disabled hidden>Choose...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+            </div>
+
+            <div class="col-6">
+                <label for="address" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" formControlName="nacimiento">
+            </div>
+
+            <div class="col-12">
+                <label for="address2" class="form-label">Foto <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite" disabled>
+            </div>
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>

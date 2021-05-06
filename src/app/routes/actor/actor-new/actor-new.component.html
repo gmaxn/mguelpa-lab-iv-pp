@@ -1,0 +1,17 @@
+<div class="container">
+    <main>
+        <div class="row g-5">
+            <app-actor-new-form class="col-md-7 col-lg-8" [selectedCountry]="selectedCountry" (newActor)="onNewActor($event)"></app-actor-new-form>
+            <app-country-grid [countries]="countries" class="col-md-5 col-lg-4 order-md-last" (selectedCountry)="onSelectedCountry($event)"></app-country-grid>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2021 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>

@@ -1,0 +1,77 @@
+#margin {
+    background: whitesmoke;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+#table-wrapper {
+    border: 2px solid black;
+    height: 100%;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: "Consolas", Courier, monospace;
+    text-align: center;
+}
+
+thead {
+    color: whitesmoke;
+}
+
+tr:nth-child(even) {
+    background-color: white    
+}
+
+tr:nth-child(odd) {
+    background-color: whitesmoke    
+}
+
+tr:hover {
+    background-color: rgb(255, 240, 120);    
+}
+
+th {
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+#margin>#table-wrapper::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+#margin>#table-wrapper>table>tbody>tr>td {
+    overflow: hidden;
+}
+
+#margin>#table-wrapper::-webkit-scrollbar-track {
+    background-color: black;
+    -webkit-box-shadow: inset 0 0 6px black;
+    border-top-right-radius: 8px;
+    background-color: lightblue;
+}
+
+#margin>#table-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.placeholder {
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    font-weight: 450;
+}

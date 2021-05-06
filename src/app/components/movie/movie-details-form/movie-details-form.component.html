@@ -1,0 +1,33 @@
+<div id="margin">
+    <form id="form-test" [formGroup]="form">
+        <p class="form-header">Detalles Pelicula</p>
+
+        <div class="form-intput-wrapper">
+            <label for="firstname">Nombre: </label>
+            <input type="text" name="nombre" formControlName="nombre">
+        </div>
+
+        <div class="form-intput-wrapper">
+            <label for="tipo">Tipo: </label>
+            <input type="text" name="tipo" formControlName="tipo">
+        </div>
+
+        <div class="form-intput-wrapper">
+            <label for="estreno">Fecha de estreno: </label>
+            <input type="date" name="estreno" formControlName="estreno">
+        </div>
+
+        <div class="form-intput-wrapper">
+            <label for="publico">Cantidad de publico: </label>
+            <input type="number" name="publico" formControlName="publico">
+        </div>
+
+        <div class="form-intput-wrapper">
+            <label for="country">Foto de película: </label>
+            <img syle="height: 25px;" src="{{form.get('imageUrl').value}}" alt="">
+        </div>
+
+        <button *ngIf="inputBorrado === 1" class="btn btn-danger" (click)="delete()">Delete</button>
+
+    </form>
+</div>

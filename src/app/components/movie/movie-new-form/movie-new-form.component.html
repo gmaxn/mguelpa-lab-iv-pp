@@ -1,0 +1,44 @@
+<div>
+    <h4 class="mb-3">Billing address</h4>
+    <form class="needs-validation" [formGroup]="form">
+        <div class="row g-3">
+            <div class="col-sm-12">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+            </div>
+
+            <div class="col-sm-12">
+                <label for="lastName" class="form-label">Tipo</label>
+                <select class="form-select" id="country" (change)="changeType($event)">
+                    <option selected hidden disabled>Choose...</option>
+                    <option value="Sci-fi">Sci-Fi</option>
+                    <option value="Accion">Accion</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Drama">Drama</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <label for="email" class="form-label">Date</label>
+                <input type="date" class="form-control" formControlName="estreno">
+            </div>
+
+            <div class="col-12">
+                <label for="publico" class="form-label">Cantidad de publico</label>
+                <input type="number" class="form-control" formControlName="publico">
+            </div>
+
+            <div class="col-12">
+                <label for="address" class="form-label">Foto</label>
+                <input type="file" class="form-control">
+            </div>
+
+            <div class="col-sm-12">
+                <label for="nombre" class="form-label">Nombre Actor</label>
+                <input type="text" class="form-control" id="nombre" formControlName="actor" readonly>
+            </div>
+
+            <button class="w-100 btn btn-primary btn-lg" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>

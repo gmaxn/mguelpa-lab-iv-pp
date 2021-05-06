@@ -1,0 +1,73 @@
+<!-- <table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>apellido</th>
+            <th>sexo</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let actor of actors" (click)="onSelection(actor)">
+            <td>{{actor.nombre}}</td>
+            <td>{{actor.apellido}}</td>
+            <td>{{actor.sexo}}</td>
+            <td>{{actor.nacimiento}}</td>
+            <td><img style="height: 100px;" src="{{actor.imageUrl}}" alt=""></td>
+        </tr>
+    </tbody>
+</table> -->
+
+<style>
+    #wrapper {}
+
+    #country-list-container {
+        overflow-y: scroll;
+        height: 285px !important;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        padding: 2px;
+
+    }
+
+    #country-list-container::-webkit-scrollbar {
+        /* display: none; */
+    }
+
+
+    #country-list {}
+
+    #row:hover {
+        background-color: rgb(255, 240, 120);    
+    }
+</style>
+
+
+<div id="wrapper">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text">Select your coutry</span>
+    </h4>
+
+    <div id="country-list-container" class="list-group mb-3">
+        <ul id="conutry-list" class="list-group mb-3" *ngIf="actors && actors.length">
+            <li id="row" class="list-group-item d-flex justify-content-between" *ngFor="let actor of actors" (click)="onSelection(actor)">
+                <div>
+                    <h6 class="my-0">{{actor.nombre}}</h6>
+                    <small class="text-muted">{{actor.apellido}}</small>
+                </div>
+                <span class="text-muted"><img style="height: 35px; width: 50px;" src="{{actor.imageUrl}}" alt=""></span>
+            </li>
+        </ul>
+    </div>
+
+
+    <form class="card p-2">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+        </div>
+    </form>
+</div>
