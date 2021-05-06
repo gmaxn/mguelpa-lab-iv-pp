@@ -1,25 +1,24 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { Country } from '../models/country';
-import { catchError, tap } from 'rxjs/operators';
-
+import { catchError } from 'rxjs/operators';
+import { GitProfile } from '../models/git-profile';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CountryService {
+export class GitService {
 
   constructor(
     private xhr: HttpClient
   ) { }
 
-  getCountries(): Observable<Country[]> {
-    return this.xhr.get<Country[]>('https://restcountries.eu/rest/v2').pipe(
+  getProfile(): Observable<GitProfile> {
+    return this.xhr.get<GitProfile>('https://api.github.com/users/gmaxn').pipe(
       catchError(this.handleError)
     );
   }
-
+  
   private handleError(err: HttpErrorResponse) {
     let errorMessage = '';
     if (err.error instanceof ErrorEvent) {
@@ -28,7 +27,6 @@ export class CountryService {
     else {
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
-    console.log(errorMessage);
     return throwError(errorMessage);
   }
 }

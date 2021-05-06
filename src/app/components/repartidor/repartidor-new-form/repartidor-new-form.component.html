@@ -1,0 +1,48 @@
+<div>
+    <h4 class="mb-3">Alta Repartidor</h4>
+    <form class="needs-validation" novalidate [formGroup]="form">
+        <div class="row g-3">
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">DNI</label>
+                <input type="number" class="form-control" formControlName="dni" [ngClass]="{'is-invalid': form.controls['dni'].errors && form.controls['dni'].touched}">
+                <small class="invalid-feedback">Campo requerido 8 digitos</small>
+            </div>
+
+            <div class="col-sm-12">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre"  [ngClass]="{'is-invalid': form.controls['nombre'].errors && form.controls['nombre'].touched}">
+                <small class="invalid-feedback">Campo requerido, solo letras, hasta 15 caracteres, sin espacios.</small>
+            </div>
+
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">Edad</label>
+                <input type="number" class="form-control" formControlName="edad"  [ngClass]="{'is-invalid': form.controls['edad'].errors && form.controls['edad'].touched}" >
+                <small class="invalid-feedback">Campo requerido, 18 a 99</small>
+
+            </div>
+
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">Capacidad</label>
+                <input type="number" class="form-control" formControlName="capacidad"  [ngClass]="{'is-invalid': form.controls['capacidad'].errors && form.controls['capacidad'].touched}">
+                <small class="invalid-feedback">Campo requerido, 1 a 10</small>
+            </div>
+
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">Nacionalidad</label>
+                <input type="text" class="form-control" formControlName="nacionalidad" readonly [ngClass]="{'is-invalid': form.controls['nacionalidad'].errors && form.controls['nacionalidad'].touched}">
+                <small class="invalid-feedback">Campo requerido</small>
+
+            </div>
+
+            <div class="form-row" style="padding-top:25px;">
+                <legend class="col-form-label col-sm-4 pt-0">Unidad propia?</legend>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" [ngClass]="{'is-invalid': form.controls['unidadPropia'].errors && form.controls['unidadPropia'].touched}" formControlName="unidadPropia">
+                    <small class="invalid-feedback" style="padding-left: 25px;">Debes contestar si o no.</small>
+                </div>
+            </div>
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>
