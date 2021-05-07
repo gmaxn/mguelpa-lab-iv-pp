@@ -4,7 +4,7 @@ import { RepartidorNewComponent } from './repartidor-new/repartidor-new.componen
 
 const routes: Routes = [
   { path: '', component: RepartidorNewComponent },
-  { path: 'alta', component: RepartidorNewComponent }
+  { path: 'alta', component: RepartidorNewComponent,  }
 ];
 
 @NgModule({
